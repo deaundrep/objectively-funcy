@@ -20,7 +20,11 @@ const setAge = function(person, age){
 }
 
 const giveBirthday = function(person){
-  person.age++;
+  if ('age' in person){
+    person.age++;
+  } else{
+    person.age = 1
+  }
 }
 
 const marry = function (person1, person2) {
